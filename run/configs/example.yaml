@@ -1,0 +1,24 @@
+# Example config for run/train.py.
+# CLI flags always override values here; values here override the
+# built-in defaults in src/config.py.
+#
+# Usage: python run/train.py --config run/configs/example.yaml
+
+case: 1
+run_name: case1_baseline
+
+# Paths default to the shared data server (identical on s29/s23):
+#   data_dir: /home/nakano/server/PINNs-LLC/data
+#   ckpt_dir: /home/nakano/server/PINNs-LLC/ckpts
+# Uncomment to override, e.g. when running somewhere else:
+# data_dir: /home/nakano/server/PINNs-LLC/data
+# ckpt_dir: /home/nakano/server/PINNs-LLC/ckpts
+
+n_iter: 320000
+batch_size: 256
+eta_min: 2.5e-6
+eta_max: 2.5e-3
+
+log_every: 10
+eval_every: 1000
+ckpt_every: 5000
