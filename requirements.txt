@@ -1,4 +1,4 @@
-tensorflow
+tensorflow[and-cuda]  # Linux GPU servers only; plain `tensorflow` lacks the CUDA/cuDNN wheels needed for GPU
 numpy
 scipy
 gdown
